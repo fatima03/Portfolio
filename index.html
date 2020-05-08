@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/FM5.png" rel="icon">
-  <link href="assets/img/FM6.png" rel="apple-touch-icon">
+  <link href="assets/img/FM5.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -302,8 +302,8 @@
           <h2>Portfolio</h2>
         </div>
 
-        <div class="row polaroid" id="academicsRow">
-          <div class="col-lg-6" id="academicsDesc">
+        <div class="row polaroid" id="academicsRow" data-aos="fade-up">
+          <div class="col-lg-6" id="academicsDesc" data-aos="fade-right">
             <br>
             <h1>Academics</h1><br>
             <!-- <h3>Is it useful?</h3> -->
@@ -312,17 +312,17 @@
               Generates print ready files as per state board format. <br>
               Reduced manual writing work of 300 hours to 3 hours of data entry time.</p>
           </div>
-          <div class="col-lg-6" id="academicsImg">
+          <div class="col-lg-6" id="academicsImg" data-aos="fade-left">
             <img src="assets/img/portfolio/YBHS.jpg">
-            <i class="fas fa-play-circle imgBtn" id="academicsPlay" data-toggle="modal" data-target="#myModal"></i>
+            <i class="fas fa-play-circle imgBtn" id="ybhsPlay" data-toggle="modal" data-target="#ybhsModal"></i>
             <!-- <video controls autoplay>
               <source src="assets/videos/YBHS.mp4" type="video/mp4">
             </video> -->
           </div>
         </div>
 
-        <div class="row polaroid" id="academicsRow">
-          <div class="col-lg-6" id="academicsDesc">
+        <div class="row polaroid" id="academicsRow" data-aos="fade-up">
+          <div class="col-lg-6" id="academicsDesc" data-aos="fade-right">
             <br>
             <h1>COPO</h1><br>
             <!-- <h3>Is it useful?</h3> -->
@@ -332,27 +332,27 @@
               Course Outcome -> Program Outcome -> Program Education Outcome. </b><br>
               My M. Tech Project! </p>
           </div>
-          <div class="col-lg-6" id="academicsImg">
+          <div class="col-lg-6" id="academicsImg" data-aos="fade-left">
             <img src="assets/img/portfolio/COPO.jpg">
-            <i class="fas fa-play-circle imgBtn" id="academicsPlay" data-toggle="modal" data-target="#myModal"></i>
+            <i class="fas fa-play-circle imgBtn" id="copoPlay" data-toggle="modal" data-target="#copoModal"></i>
             <!-- <video controls autoplay>
               <source src="assets/videos/YBHS.mp4" type="video/mp4">
             </video> -->
           </div>
         </div>
 
-        <div class="row polaroid" id="academicsRow">
-          <div class="col-lg-6" id="academicsDesc">
+        <div class="row polaroid" id="academicsRow" data-aos="fade-up">
+          <div class="col-lg-6" id="academicsDesc" data-aos="fade-right">
             <br>
             <h1>CPCC</h1><br>
             <!-- <h3>Is it useful?</h3> -->
             <p>A web based C Compiler. <br>
-              <b>(C Code) -> (JavaScript Code) -> Browser</b> <br>
+              <b>Makes Browser Run C Codes!</b> <br>
               My B.E. Project! <br>
           </div>
-          <div class="col-lg-6" id="academicsImg">
-            <img src="assets/img/portfolio/YBHS.jpg">
-            <i class="fas fa-play-circle imgBtn" id="academicsPlay" data-toggle="modal" data-target="#myModal"></i>
+          <div class="col-lg-6" id="academicsImg" data-aos="fade-left">
+            <img src="assets/img/portfolio/CPCC.jpg">
+            <i class="fas fa-play-circle imgBtn" id="cpccPlay" data-toggle="modal" data-target="#cpccModal"></i>
             <!-- <video controls autoplay>
               <source src="assets/videos/YBHS.mp4" type="video/mp4">
             </video> -->
@@ -408,7 +408,7 @@
                 <li> As developer a for Data Lake, designed and delivered 20+ HANA Views for providing Self Service Analytics. </li>
                 <li> Delivered Macro Enabled Worksheet for local business users reducing 40 hours of manual work every week. </li>
                 <li> Got Recognized by Leaders as well as Customers for efficient Deliveries. </li>
-                <li> Mentored 2 new developers in technical space. </li>
+                <!-- <li> Mentored 2 new developers in technical space. </li> -->
 
               </ul>
             </div>
@@ -481,13 +481,41 @@
   <!-- End  Footer -->
 
   <!-- MODAL -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg modal-dialog-centered">   
+  <div class="modal fade" id="ybhsModal" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">   
       
-      <div class="modal-content">
-        <div class="modal-body">
+      <div class="modal-body" style="padding: 5px; background-color: #000;">
+          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
           <video controls autoplay>
-            <source src="assets/videos/YBHS.mp4" type="video/mp4">
+            <source src="assets/videos/YBHS.mp4" type="video/mp4" id="ybhsVid">
+          </video>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="copoModal" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">   
+      
+      <div class="modal-body" style="padding: 5px; background-color: #000;">
+          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+          <video controls autoplay>
+            <source src="assets/videos/COPO.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="cpccModal" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">   
+      
+      <div class="modal-body" style="padding: 5px; background-color: #000;">
+          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+          <video controls autoplay>
+            <source src="assets/videos/CPCC.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -514,6 +542,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+
+
   <!-- jQuery Code -->
   <!-- <script>
     $(document).ready(function(){
@@ -533,6 +563,13 @@
       })
     })
   </script> -->
+  <script>
+    // $(document).ready(function(){
+    //   $("#ybhsPlay").click(function(){
+    //     $('#ybhsVid').get(0).play();
+    //   })
+    // })
+  </script>
 
 </body>
 
