@@ -481,48 +481,45 @@
   <!-- End  Footer -->
 
   <!-- MODAL -->
-  <div class="modal fade" id="ybhsModal" role="dialog">
-    <div class="modal-dialog modal-xl modal-dialog-centered">   
-      
-      <div class="modal-body" style="padding: 5px; background-color: #000;">
-          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
-          <video controls autoplay>
-            <source src="assets/videos/YBHS.mp4" type="video/mp4" id="ybhsVid">
+
+  <div id="ybhsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="ybhsVid" controls>
+            <source src="assets/videos/YBHS.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      
     </div>
   </div>
 
-  <div class="modal fade" id="copoModal" role="dialog">
-    <div class="modal-dialog modal-xl modal-dialog-centered">   
-      
-      <div class="modal-body" style="padding: 5px; background-color: #000;">
-          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
-          <video controls autoplay>
+  <div id="copoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="copoVid" controls>
             <source src="assets/videos/COPO.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      
     </div>
   </div>
 
-  <div class="modal fade" id="cpccModal" role="dialog">
-    <div class="modal-dialog modal-xl modal-dialog-centered">   
-      
-      <div class="modal-body" style="padding: 5px; background-color: #000;">
-          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
-          <video controls autoplay>
+  <div id="cpccModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="cpccVid" controls>
             <source src="assets/videos/CPCC.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      
     </div>
   </div>
-
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
@@ -564,11 +561,27 @@
     })
   </script> -->
   <script>
-    // $(document).ready(function(){
-    //   $("#ybhsPlay").click(function(){
-    //     $('#ybhsVid').get(0).play();
-    //   })
-    // })
+    $(document).ready(function(){
+      $('#ybhsModal').on('shown.bs.modal', function () {
+        $('#ybhsVid')[0].play();
+      });
+      $('#ybhsModal').on('hidden.bs.modal', function () {
+        $('#ybhsVid')[0].pause();
+      });
+      $('#copoModal').on('shown.bs.modal', function () {
+        $('#copoVid')[0].play();
+      });
+      $('#copoModal').on('hidden.bs.modal', function () {
+        $('#copoVid')[0].pause();
+      });
+      $('#cpccModal').on('shown.bs.modal', function () {
+        $('#cpccVid')[0].play();
+      });
+      $('#cpccModal').on('hidden.bs.modal', function () {
+        $('#cpccVid')[0].pause();
+      });
+    });
+      
   </script>
 
 </body>
