@@ -831,20 +831,22 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
-  background: #ed3c0d;
+  color: #ed3c0d;
+  background: ;
   text-align: center;
   padding: 15px;
-  font-weight: 600;
+  /*font-weight: 600;*/
+  font-style: italic;
 }
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
-  background: #18d26e;
+  color: #18d26e;
+  background: ;
   text-align: center;
   padding: 15px;
-  font-weight: 600;
+  /*font-weight: 600;*/
+  font-style: italic;
 }
 
 .contact .php-email-form .loading {
@@ -1089,9 +1091,12 @@ img {
   height: auto;
 }
 .polaroid {
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
   padding: 60px;
   margin-bottom: 60px;
+  /*border: 1px solid;*/
+  /*border-color: #333;*/
+  border-radius: 12%;
 }
 .imgBtn {
   position: absolute;

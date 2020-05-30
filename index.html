@@ -295,30 +295,6 @@
 
 
     <!-- ======= Certification Section ======= -->
-    <!-- <section id="about" class="certi">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Certifications</h2>
-          <p>Because I like to keep learning new things: </p>
-        </div>
-
-        <div class="resume col-lg-12 fade-up" style="padding-left: 5%;">
-
-          <div class="resume-item">
-            <h6>Learning Full-Stack JavaScript Development: MongoDB, Node, and React</h6>
-          </div>
-          <div class="resume-item">
-            <h6>Node.js Essential Training</h6>
-          </div>
-          <div class="resume-item">
-            <h6>ASP.NET MVC 5 Essential Training</h6>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
           
     <section id="about" class="certi">
       <div class="container">
@@ -370,37 +346,7 @@
       </div>
     </section>
 
-    <!-- <section id="about" class="certi">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Certifications</h2>
-          <p>Because I like to keep learning new things: </p>
-        </div>
-
-          <div class="col-lg-12" data-aos="fade-up" style="padding-top: 0px; padding-left: 4%;">
-
-            <div><a href="" class="">
-              <img src="assets/img/logo3.png" class="imgLogo">
-              <p class="logoText">Learning Full-Stack JavaScript Development: MongoDB, Node, and React</p> 
-            </a> </div>
-            <div><a href="" class="">
-              <img src="assets/img/logo3.png" class="imgLogo">
-              <p class="logoText">Node.js Essential Training</p> 
-            </a> </div>
-            <div><a href="" class="">
-              <img src="assets/img/logo3.png" class="imgLogo">
-              <p class="logoText">ASP.NET MVC 5 Essential Training</p> 
-            </a> </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-
-    <!-- ======= Certification Section ======= -->
+    <!-- ======= Publication Section ======= -->
           
     <section id="about" class="paper section-bg">
       <div class="container">
@@ -557,9 +503,9 @@
               <p><em>Yakub Baig High School, Navi Mumbai, India</em></p>
               <ul>
                 <li> Academics, an easy to use Web Application which has digitalized student data management, academic sheets and result generation as per the prescribed format of Maharashtra state government.</li>
-                <li> This project has reduced the yearly 300 hour manual writing work of teachers to 3 hours of data entry time. </li>
+                <li> This project has reduced the yearly 300 hour manual writing work of teachers to 3 hours of data entry time, eliminating chances of calculation errors. </li>
                 <li> Single-handedly worked on Design, Development, Testing, Implementation and Support. </li>
-                <li> The Application is currently in use at two branches of schools. </li>
+                <li> The Application has been working efficiently at two schools since 2017. </li>
 
               </ul>
             </div>
@@ -586,7 +532,7 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>fatima.mulla766@gmail.com</p>
+                <p><a href="mailto:fatima.mulla766@gmail.com" class="google-plus">fatima.mulla766@gmail.com</a></p>
               </div>
 
               <div class="phone">
@@ -605,6 +551,40 @@
             </div>
 
           </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message" id="error-message"></div>
+                <div class="sent-message" id="sent-message"></div>
+              </div>
+              <div class="text-center"><button type="submit" onclick="saveToFirebase()">Send Message</button></div>
+            </form>
+          </div>
+
 
         </div>
 
@@ -678,64 +658,50 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+  <script src="firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
 
 
-  <!-- jQuery Code -->
-  <!-- <script>
-    $(document).ready(function(){
-      $("#academicsVideo").hide();
-      $("#academicsPlay").click(function(){
-        $("academicsDesc").animate({
-          top: '+550px'
-        });
-        $("#academicsImg").hide();
-        //$("#academicsVideo").show();
-        // $("#academicsDesc").toggleClass("col-lg-6 col-lg-12");
-        // $("#academicsImg").animate({
-        //   left: '+150px'
-        // });
-        // $("#academicsRow").toggleClass("polaroid");
-        // $("#academicsDesc").toggleClass("col-lg-6 col-lg-12");
-      })
-    })
-  </script> -->
-
+  <!-- Modal Playground -->
   <script>
 
-    $(document).ready(function(){
+      $(document).ready(function(){
 
-      //Modal Through URLs
-      if(window.location.href.indexOf('#academics') != -1) {
-        $('#ybhsModal').modal('show');
-      }
-      if(window.location.href.indexOf('#copo') != -1) {
-        $('#copoModal').modal('show');
-      }
-      if(window.location.href.indexOf('#cpcc') != -1) {
-        $('#cpccModal').modal('show');
-      }
+          //Modal Through URLs
+          if(window.location.href.indexOf('#academics') != -1) {
+            $('#ybhsModal').modal('show');
+          }
+          if(window.location.href.indexOf('#copo') != -1) {
+            $('#copoModal').modal('show');
+          }
+          if(window.location.href.indexOf('#cpcc') != -1) {
+            $('#cpccModal').modal('show');
+          }
 
-      //Pause & Play Videos
-      $('#ybhsModal').on('shown.bs.modal', function () {
-        $('#ybhsVid')[0].play();
-      });
-      $('#ybhsModal').on('hidden.bs.modal', function () {
-        $('#ybhsVid')[0].pause();
-      });
-      $('#copoModal').on('shown.bs.modal', function () {
-        $('#copoVid')[0].play();
-      });
-      $('#copoModal').on('hidden.bs.modal', function () {
-        $('#copoVid')[0].pause();
-      });
-      $('#cpccModal').on('shown.bs.modal', function () {
-        $('#cpccVid')[0].play();
-      });
-      $('#cpccModal').on('hidden.bs.modal', function () {
-        $('#cpccVid')[0].pause();
-      });
+          //Pause & Play Videos
+          $('#ybhsModal').on('shown.bs.modal', function () {
+            $('#ybhsVid')[0].play();
+          });
+          $('#ybhsModal').on('hidden.bs.modal', function () {
+            $('#ybhsVid')[0].pause();
+          });
+          $('#copoModal').on('shown.bs.modal', function () {
+            $('#copoVid')[0].play();
+          });
+          $('#copoModal').on('hidden.bs.modal', function () {
+            $('#copoVid')[0].pause();
+          });
+          $('#cpccModal').on('shown.bs.modal', function () {
+            $('#cpccVid')[0].play();
+          });
+          $('#cpccModal').on('hidden.bs.modal', function () {
+            $('#cpccVid')[0].pause();
+          });
 
-    });
+      });
       
   </script>
 
