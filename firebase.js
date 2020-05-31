@@ -23,10 +23,14 @@ firebase.analytics();
 
 function saveToFirebase() {
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+  var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+  if( re.test(email) && !empty(name) && !empty(email) && !empty(subject) && !empty(message) ){                 
+  
     var messageObject = {
         name: name,
         email: email,
@@ -34,9 +38,10 @@ function saveToFirebase() {
         message: message
     };
     var d = new Date();
-  var n = d.getTime();
+    var n = d.getTime();
     
     // firebase.database().ref(email.replace(/[^a-zA-Z0-9]/g, '')).set(messageObject)
+    
     firebase.database().ref(n).set(messageObject)
         .then(function() {
           console.log('Synchronization succeeded');
@@ -48,5 +53,5 @@ function saveToFirebase() {
           document.getElementById("error-message").style.display = "block";
           document.getElementById("error-message").innerHTML = 'Sorry messages cannot not be sent right now.';
         });
-
+  }
 }

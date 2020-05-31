@@ -1175,20 +1175,30 @@ img {
     color: #149ddd;
   }
 
-.resume .resume-item2 {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #1f5297;
-  position: relative;
+.chip {
+  display: inline-block;
+  padding: 0 7px;
+  height: 25px;
+  font-size: 13px;
+  line-height: 25px;
+  border: 1px solid;
+  border-radius: 20px;
+  color: #6d8082;
+  border-color: #6d8082;
+  /*background-color: #bdc3c7;*/
 }
-  .resume .resume-item2::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
+.chip-front{
+  /*border-color: #f9ca24;
+  color: #f9ca24;*/
+  /*background-color:#3498db; */
+}
+.chip-mid{
+  /*border-color: #be2edd;
+  color: #be2edd;*/
+  /*background-color:#2ecc71;*/
+}
+.chip-back{
+  /*border-color: #eb4d4b;
+  color: #eb4d4b;*/
+  /*background-color:#2ecc71;*/
 }
