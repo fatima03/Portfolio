@@ -23,14 +23,15 @@ firebase.analytics();
 
 function saveToFirebase() {
 
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var subject = document.getElementById("subject").value;
-  var message = document.getElementById("message").value;
+  var name = document.getElementById("name").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var subject = document.getElementById("subject").value.trim();
+  var message = document.getElementById("message").value.trim();
   var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-  if( re.test(email) && !empty(name) && !empty(email) && !empty(subject) && !empty(message) ){                 
-  
+
+  if( re.test(email) && name && email && subject && message ){  
+
     var messageObject = {
         name: name,
         email: email,
@@ -41,7 +42,7 @@ function saveToFirebase() {
     var n = d.getTime();
     
     // firebase.database().ref(email.replace(/[^a-zA-Z0-9]/g, '')).set(messageObject)
-    
+
     firebase.database().ref(n).set(messageObject)
         .then(function() {
           console.log('Synchronization succeeded');
