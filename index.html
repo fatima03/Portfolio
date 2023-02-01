@@ -394,6 +394,32 @@
           <h2>Portfolio</h2>
         </div>
 
+        <div class="row polaroid" id="powerConnectRow" data-aos="fade-up">
+          <div class="col-lg-6" id="powerConnectDesc" data-aos="fade-right">
+            <br>
+            <h1>Power Connect</h1><br>
+            <!-- <h3>Is it useful?</h3> -->
+            <p>Easy to use Web Application. <br>
+              Developed for School Teachers. <br>
+              Deployed in 2 schools. <br>
+              Generates print ready files as per state board format. <br>
+              Reduces writing work of 300 hours to 3 hours data entry time.<br><br>
+              <span class="chip chip-front">HTML</span>
+              <span class="chip chip-front">CSS</span>
+              <span class="chip chip-front">JavaScript</span>
+              <span class="chip chip-mid">MySQL</span>
+              <span class="chip chip-back">PHP</span>
+            </p>
+          </div>
+          <div class="col-lg-6" id="powerConnectImg" data-aos="fade-left">
+            <img src="assets/img/portfolio/powerConnect.jpg">
+            <i class="fas fa-play-circle imgBtn" id="powerConnectPlay" data-toggle="modal" data-target="#powerConnectModal"></i>
+            <!-- <video controls autoplay>
+              <source src="assets/videos/YBHS.mp4" type="video/mp4">
+            </video> -->
+          </div>
+        </div>
+
         <div class="row polaroid" id="academicsRow" data-aos="fade-up">
           <div class="col-lg-6" id="academicsDesc" data-aos="fade-right">
             <br>
@@ -650,6 +676,71 @@
 
   <!-- MODAL -->
 
+  <div id="powerConnectModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="powerConnectVid" controls>
+            <source src="assets/videos/PowerConnect.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="powerPulseModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="powerPulseVid" controls>
+            <source src="assets/videos/PowerPulse.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="powerFMModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="powerFMVid" controls>
+            <source src="assets/videos/PowerFM.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="powerSignModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="powerSignVid" controls>
+            <source src="assets/videos/PowerSign.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="waslModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-centered">  
+      <div class="modal-content" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-body" style="padding:0px 5px 0px 5px; background-color: transparent;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <video id="waslVid" controls>
+            <source src="assets/videos/Wasl.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="ybhsModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-xl modal-dialog-centered">  
       <div class="modal-content" style="background-color: transparent; border-color: transparent;">
@@ -720,6 +811,21 @@
       $(document).ready(function(){
 
           //Modal Through URLs
+          if(window.location.href.indexOf('#powerConnect') != -1) {
+            $('#powerConnectModal').modal('show');
+          }
+          if(window.location.href.indexOf('#powerPulse') != -1) {
+            $('#powerPulseModal').modal('show');
+          }
+          if(window.location.href.indexOf('#powerFM') != -1) {
+            $('#powerFMModal').modal('show');
+          }
+          if(window.location.href.indexOf('#powerSign') != -1) {
+            $('#powerSignModal').modal('show');
+          }
+          if(window.location.href.indexOf('#wasl') != -1) {
+            $('#waslModal').modal('show');
+          }
           if(window.location.href.indexOf('#academics') != -1) {
             $('#ybhsModal').modal('show');
           }
@@ -731,6 +837,36 @@
           }
 
           //Pause & Play Videos
+          $('#powerConnectModal').on('shown.bs.modal', function () {
+            $('#powerConnectVid')[0].play();
+          });
+          $('#powerConnectModal').on('hidden.bs.modal', function () {
+            $('#powerConnectVid')[0].pause();
+          });
+          $('#powerPulseModal').on('shown.bs.modal', function () {
+            $('#powerPulseVid')[0].play();
+          });
+          $('#powerPulseModal').on('hidden.bs.modal', function () {
+            $('#powerPulseVid')[0].pause();
+          });
+          $('#powerFMModal').on('shown.bs.modal', function () {
+            $('#powerFMVid')[0].play();
+          });
+          $('#powerFMModal').on('hidden.bs.modal', function () {
+            $('#powerFMVid')[0].pause();
+          });
+          $('#powerSignModal').on('shown.bs.modal', function () {
+            $('#powerSignVid')[0].play();
+          });
+          $('#powerSignModal').on('hidden.bs.modal', function () {
+            $('#powerSignVid')[0].pause();
+          });
+          $('#waslModal').on('shown.bs.modal', function () {
+            $('#waslVid')[0].play();
+          });
+          $('#waslModal').on('hidden.bs.modal', function () {
+            $('#waslVid')[0].pause();
+          });
           $('#ybhsModal').on('shown.bs.modal', function () {
             $('#ybhsVid')[0].play();
           });
